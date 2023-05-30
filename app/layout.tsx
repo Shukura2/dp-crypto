@@ -1,8 +1,11 @@
 "use client";
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { useState } from "react";
+import { ThemeProvider, CssBaseline, useMediaQuery, Box } from "@mui/material";
 import "./globals.css";
 import { merriweatherSans } from "@/font";
 import { ColorModeContext, useMode } from "@/theme";
+import Navbar from "@/components/navbar";
+import Sidebar from "@/components/Sidebar";
 
 export const metadata = {
   title: "DP Crypto",
@@ -15,6 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [theme, colorMode] = useMode();
+  const [max, setMax] = useState<boolean>(true);
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <html lang="en">
@@ -22,7 +27,30 @@ export default function RootLayout({
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            {children}
+            <div style={{ width: "100%", height: "100%" }}>
+              <Navbar max={max} setMax={setMax} />
+              <main
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  position: "relative",
+                }}
+              >
+                {isDesktop && <Sidebar max={max} />}
+                <Box
+                  sx={{
+                    marginTop: "70px",
+                    marginLeft: max ? "240px" : "150px",
+                    "@media (max-width: 767px)": {
+                      marginLeft: "0",
+                    },
+                  }}
+                >
+                  {children}
+                </Box>
+              </main>
+            </div>
           </ThemeProvider>
         </ColorModeContext.Provider>
       </body>
