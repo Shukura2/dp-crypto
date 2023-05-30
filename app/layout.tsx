@@ -23,7 +23,14 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={merriweatherSans.className}>
+      <head>
+        <title>DP Crypto</title>
+      </head>
+
+      <body
+        className={merriweatherSans.className}
+        style={{ backgroundColor: theme.palette.background.default }}
+      >
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
@@ -42,6 +49,7 @@ export default function RootLayout({
                   sx={{
                     marginTop: "70px",
                     marginLeft: max ? "240px" : "150px",
+                    color: theme.palette.primary.dark,
                     "@media (max-width: 767px)": {
                       marginLeft: "0",
                     },

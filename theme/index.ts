@@ -20,6 +20,7 @@ export const themeSettings = (mode: string) => {
         ? {
             primary: {
               main: colorTheme.blueAccent[200],
+              dark: colorTheme.blueAccent[600],
             },
             secondary: { main: colorTheme.greenAccent[500] },
             neutral: {
@@ -34,6 +35,7 @@ export const themeSettings = (mode: string) => {
         : {
             primary: {
               main: colorTheme.blueAccent[400],
+              dark: colorTheme.blueAccent[600],
             },
             secondary: {
               main: colorTheme.greenAccent[500],

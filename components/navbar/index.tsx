@@ -55,7 +55,9 @@ const Navbar = ({ setMax }: any) => {
               }
             }}
           >
-            <MenuIcon sx={{ fontSize: "30px" }} />
+            <MenuIcon
+              sx={{ fontSize: "30px", color: theme.palette.primary.dark }}
+            />
           </IconButton>
 
           <Typography variant="h3" sx={{ marginLeft: "10px" }}>
@@ -65,7 +67,11 @@ const Navbar = ({ setMax }: any) => {
 
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <IconButton onClick={colorMode.toggleColorMode}>
-            {theme.palette.mode === "dark" ? <WbSunnyIcon /> : <DarkModeIcon />}
+            {theme.palette.mode === "dark" ? (
+              <WbSunnyIcon sx={{ color: theme.palette.primary.dark }} />
+            ) : (
+              <DarkModeIcon sx={{ color: theme.palette.primary.dark }} />
+            )}
           </IconButton>
           <Box>
             <IconButton onClick={handleOpenUserMenu}>

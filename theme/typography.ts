@@ -3,6 +3,7 @@ import { merriweatherSans } from "@/font";
 const typography = {
   fontFamily: [merriweatherSans, "Arial", "sans-serif"],
   fontSize: 16,
+
   h1: {
     fontFamily: [merriweatherSans, "Arial", "sans-serif"],
     fontSize: 40,
@@ -16,7 +17,7 @@ const typography = {
   h3: {
     fontFamily: [merriweatherSans, "Arial", "sans-serif"],
     fontSize: 24,
-    fontWeight: 400,
+    fontWeight: 700,
   },
   h4: {
     fontFamily: [merriweatherSans, "Arial", "sans-serif"],
