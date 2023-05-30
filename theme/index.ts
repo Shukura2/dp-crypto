@@ -1,8 +1,8 @@
-import { createContext, useMemo, useState } from "react";
-import { createTheme, ThemeOptions } from "@mui/material";
 import typography from "./typography";
 import colors from "./color";
 import breakpoints from "./breakPoints";
+import { createContext, useMemo, useState } from "react";
+import { createTheme, ThemeOptions } from "@mui/material";
 
 interface IThemeOptions extends ThemeOptions {
   palette: any;
@@ -15,36 +15,36 @@ export const themeSettings = (mode: string) => {
 
   return {
     palette: {
-      mode,
+      mode: mode,
       ...(mode === "dark"
         ? {
             primary: {
-              main: colorTheme.primary[500],
+              main: colorTheme.blueAccent[200],
             },
             secondary: { main: colorTheme.greenAccent[500] },
             neutral: {
-              dark: colorTheme.grey[700],
-              main: colorTheme.grey[500],
-              light: colorTheme.grey[100],
+              dark: colorTheme.redAccent[400],
+              main: colorTheme.blueAccent[300],
+              light: colorTheme.blueAccent[200],
             },
             background: {
-              default: colorTheme.primary[500],
+              default: colorTheme.blueAccent[500],
             },
           }
         : {
             primary: {
-              main: colorTheme.primary[100],
+              main: colorTheme.blueAccent[400],
             },
             secondary: {
               main: colorTheme.greenAccent[500],
             },
             neutral: {
-              dark: colorTheme.grey[700],
-              main: colorTheme.grey[500],
-              light: colorTheme.grey[100],
+              dark: colorTheme.redAccent[400],
+              main: colorTheme.blueAccent[300],
+              light: colorTheme.blueAccent[200],
             },
             background: {
-              default: "#fcfcfc",
+              default: colorTheme.blueAccent[100],
             },
           }),
     },
