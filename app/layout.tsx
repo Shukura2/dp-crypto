@@ -19,11 +19,18 @@ export default function RootLayout({
 }) {
   const [theme, colorMode] = useMode();
   const [max, setMax] = useState<boolean>(true);
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
 
   return (
     <html lang="en">
-      <body className={merriweatherSans.className}>
+      <head>
+        <title>DP Crypto</title>
+      </head>
+
+      <body
+        className={merriweatherSans.className}
+        style={{ backgroundColor: theme.palette.background.default }}
+      >
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
@@ -31,18 +38,18 @@ export default function RootLayout({
               <Navbar max={max} setMax={setMax} />
               <main
                 style={{
-                  width: "100%",
-                  height: "100%",
                   display: "flex",
-                  position: "relative",
                 }}
               >
                 {isDesktop && <Sidebar max={max} />}
                 <Box
                   sx={{
-                    marginTop: "70px",
+                    width: "100%",
+                    position: "relative",
+                    top: "70px",
                     marginLeft: max ? "240px" : "150px",
-                    "@media (max-width: 767px)": {
+                    color: theme.palette.primary.dark,
+                    "@media (max-width: 991px)": {
                       marginLeft: "0",
                     },
                   }}

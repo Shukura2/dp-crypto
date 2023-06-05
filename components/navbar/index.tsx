@@ -28,7 +28,7 @@ const Navbar = ({ setMax }: any) => {
   const pathname = usePathname();
   const colorMode = useContext(ColorModeContext);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -55,7 +55,9 @@ const Navbar = ({ setMax }: any) => {
               }
             }}
           >
-            <MenuIcon sx={{ fontSize: "30px" }} />
+            <MenuIcon
+              sx={{ fontSize: "30px", color: theme.palette.primary.dark }}
+            />
           </IconButton>
 
           <Typography variant="h3" sx={{ marginLeft: "10px" }}>
@@ -65,7 +67,11 @@ const Navbar = ({ setMax }: any) => {
 
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <IconButton onClick={colorMode.toggleColorMode}>
-            {theme.palette.mode === "dark" ? <WbSunnyIcon /> : <DarkModeIcon />}
+            {theme.palette.mode === "dark" ? (
+              <WbSunnyIcon sx={{ color: theme.palette.primary.dark }} />
+            ) : (
+              <DarkModeIcon sx={{ color: theme.palette.primary.dark }} />
+            )}
           </IconButton>
           <Box>
             <IconButton onClick={handleOpenUserMenu}>

@@ -26,6 +26,7 @@ const Sidebar = ({ max }: Props) => {
             position: "fixed",
             overflow: "scroll",
             top: "70px",
+            backgroundColor: theme.palette.background.default,
             "::-webkit-scrollbar": {
               display: "none",
             },
@@ -53,6 +54,7 @@ const Sidebar = ({ max }: Props) => {
                     borderRadius: "10px",
                     backgroundColor:
                       pathname === label.path ? theme.palette.primary.main : "",
+                    color: theme.palette.primary.dark,
                     ":hover": {
                       background: theme.palette.primary.main,
                     },
@@ -81,6 +83,7 @@ const Sidebar = ({ max }: Props) => {
             position: "fixed",
             overflow: "scroll",
             top: "70px",
+            backgroundColor: theme.palette.background.default,
             "::-webkit-scrollbar": {
               display: "none",
             },
@@ -109,6 +112,7 @@ const Sidebar = ({ max }: Props) => {
                     textAlign: "center",
                     backgroundColor:
                       pathname === label.path ? theme.palette.primary.main : "",
+                    color: theme.palette.primary.dark,
                     ":hover": {
                       background: theme.palette.primary.main,
                     },
