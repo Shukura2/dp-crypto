@@ -21,8 +21,12 @@ export const themeSettings = (mode: string) => {
             primary: {
               main: colorTheme.blueAccent[200],
               dark: colorTheme.blueAccent[600],
+              light: colorTheme.blueAccent[700],
             },
-            secondary: { main: colorTheme.greenAccent[500] },
+            secondary: {
+              main: colorTheme.greenAccent[500],
+              light: colorTheme.blueAccent[800],
+            },
             neutral: {
               dark: colorTheme.redAccent[400],
               main: colorTheme.blueAccent[300],
@@ -36,9 +40,11 @@ export const themeSettings = (mode: string) => {
             primary: {
               main: colorTheme.blueAccent[400],
               dark: colorTheme.blueAccent[600],
+              light: colorTheme.blueAccent[700],
             },
             secondary: {
               main: colorTheme.greenAccent[500],
+              light: colorTheme.blueAccent[800],
             },
             neutral: {
               dark: colorTheme.redAccent[400],

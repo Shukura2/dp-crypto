@@ -28,7 +28,7 @@ const Navbar = ({ setMax }: any) => {
   const pathname = usePathname();
   const colorMode = useContext(ColorModeContext);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 

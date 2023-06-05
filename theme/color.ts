@@ -7,7 +7,6 @@ const colors = (mode: any) => ({
           300: "#94e2cd",
           400: "#70d8bd",
           500: "#4cceac",
-          600: "#fff",
         },
         redAccent: {
           100: "#f8dcdb",
@@ -22,6 +21,9 @@ const colors = (mode: any) => ({
           300: "#1c2e4a",
           400: "#192841",
           500: "#152238",
+          600: "#fff",
+          700: "fff",
+          800: "#fff",
         },
       }
     : {
@@ -45,6 +47,8 @@ const colors = (mode: any) => ({
           400: "#F5F5DC",
           500: "#EDEADE",
           600: "#000",
+          700: "fff",
+          800: "#192841",
         },
       }),
 });
