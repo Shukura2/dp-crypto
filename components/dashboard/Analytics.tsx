@@ -100,7 +100,7 @@ const Analytics = (): JSX.Element => {
           {totalIncomeSection.map((item: IncomeSection) => {
             const { title, figure, income, time } = item;
             return (
-              <Grid item xs={12} md={6} lg={3}>
+              <Grid item xs={12} md={6} lg={3} key={title}>
                 <Typography variant="h6" mb="15px">
                   {title}
                 </Typography>

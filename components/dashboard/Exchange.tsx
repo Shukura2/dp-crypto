@@ -99,7 +99,7 @@ const Exchange = (): JSX.Element => {
           {exchange.map((item) => {
             const { title, subTitle, menuTitle, menuTitle2 } = item;
             return (
-              <Box sx={{ marginBottom: "15px" }}>
+              <Box sx={{ marginBottom: "15px" }} key={title}>
                 <Typography variant="h6" marginBottom="10px">
                   {title}
                 </Typography>

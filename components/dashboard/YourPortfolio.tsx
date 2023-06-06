@@ -85,6 +85,7 @@ const YourPortfolio = (): JSX.Element => {
           const { icon, title, figure, rate } = item;
           return (
             <Box
+              key={title}
               sx={{
                 padding: "17px 0",
                 display: "flex",
