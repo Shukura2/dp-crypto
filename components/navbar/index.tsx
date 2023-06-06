@@ -152,7 +152,7 @@ const Navbar = ({ setMax }: any) => {
             }}
           >
             {links.map((label) => (
-              <ListItem key={label.title} onClick={() => setOpenDrawer(false)}>
+              <ListItem key={label.title} onClick={() => setOpenDrawer(false)} >
                 <Link href={label.path} style={{ width: "100%" }}>
                   <ListItemText
                     sx={{

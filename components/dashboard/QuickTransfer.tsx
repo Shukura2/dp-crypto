@@ -46,10 +46,10 @@ const QuickTransfer = (): JSX.Element => {
               borderBottom: `1px solid ${theme.palette.primary.dark}`,
             }}
           >
-            {quickTransfer.map((item) => {
+            {quickTransfer.map((item, index) => {
               const { image, name, others } = item;
               return (
-                <Box sx={style.imgWrap}>
+                <Box sx={style.imgWrap} key={index}>
                   <Image src={image} alt={name} width={69} height={72} />
                   <Typography variant="h6">{name}</Typography>
                   <Typography sx={{ fontSize: "11px" }}>{others}</Typography>

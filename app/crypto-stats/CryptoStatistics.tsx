@@ -114,9 +114,9 @@ const CryptoStatictics = () => {
                   borderSpacing: " 0 15px",
                 }}
               >
-                {minningCost.map((item, index) => (
+                {minningCost.map((item) => (
                   <Table
-                    key={index}
+                    key={item.title}
                     title={item.title}
                     price={item.price}
                     view={item.view}
@@ -144,9 +144,9 @@ const CryptoStatictics = () => {
                   borderSpacing: " 0 15px",
                 }}
               >
-                {transactionSummer.map((item, index) => (
+                {transactionSummer.map((item) => (
                   <Table
-                    key={index}
+                    key={item.title}
                     title={item.title}
                     price={item.price}
                     view={item.view}
