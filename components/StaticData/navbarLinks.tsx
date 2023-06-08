@@ -13,6 +13,7 @@ import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import TableChartOutlinedIcon from "@mui/icons-material/TableChartOutlined";
 import AutoGraphOutlinedIcon from "@mui/icons-material/AutoGraphOutlined";
 import PublicOutlinedIcon from "@mui/icons-material/PublicOutlined";
+import FormatShapesOutlinedIcon from "@mui/icons-material/FormatShapesOutlined";
 
 export const links = [
   { icon: <GridViewOutlinedIcon />, title: "Dashboard", path: "/" },
@@ -26,15 +27,16 @@ export const links = [
     title: "Crypto Stats",
     path: "/crypto-stats",
   },
-  // {
-  //   icon: <FormatShapesOutlinedIcon />,
-  //   title: "App",
-  //   subNav: [
-  //     { title: "Calendar", path: "/calendar" },
-  //     { title: "Invoice", path: "/invoice" },
-  //     { title: "Draggable Card", path: "/draggable-card" },
-  //   ],
-  // },
+  {
+    icon: <FormatShapesOutlinedIcon />,
+    title: "App",
+    path: "",
+    subNav: [
+      { title: "Calendar", path: "/calendar" },
+      { title: "Invoice", path: "/invoice" },
+      { title: "Draggable Card", path: "/draggable-card" },
+    ],
+  },
   {
     icon: <ShoppingCartOutlinedIcon />,
     title: "Buy & Sell",

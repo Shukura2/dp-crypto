@@ -31,6 +31,7 @@ const Navbar = ({ setMax }: any) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const [open, setOpen] = useState(false);
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
@@ -152,32 +153,82 @@ const Navbar = ({ setMax }: any) => {
             }}
           >
             {links.map((label) => (
-              <ListItem key={label.title} onClick={() => setOpenDrawer(false)} >
+              <ListItem key={label.title} onClick={() => setOpenDrawer(false)}>
                 <Link href={label.path} style={{ width: "100%" }}>
-                  <ListItemText
-                    sx={{
-                      padding: "8px",
-                      borderRadius: "10px",
-                      backgroundColor:
-                        pathname === label.path
-                          ? theme.palette.primary.main
-                          : "",
-                      ":hover": {
-                        background: theme.palette.primary.main,
-                      },
-                    }}
-                  >
-                    <Box
+                  {label.subNav ? (
+                    <Box>
+                      <ListItemText
+                        onClick={() => setOpen(!open)}
+                        sx={{
+                          padding: "8px",
+                          borderRadius: "10px",
+                          backgroundColor:
+                            pathname === label.path
+                              ? theme.palette.primary.main
+                              : "",
+                          ":hover": {
+                            background: theme.palette.primary.main,
+                          },
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            columnGap: "10px",
+                          }}
+                        >
+                          <span> {label.icon}</span>
+                          <span>{label.title}</span>
+                        </Box>
+                      </ListItemText>
+                      {open &&
+                        label.subNav.map((item) => (
+                          <Link href={item.path}>
+                            <ListItemText
+                              sx={{
+                                padding: "8px",
+                                borderRadius: "10px",
+                                backgroundColor:
+                                  pathname === label.path
+                                    ? theme.palette.primary.main
+                                    : "",
+                                ":hover": {
+                                  background: theme.palette.primary.main,
+                                },
+                              }}
+                            >
+                              {item.title}
+                            </ListItemText>
+                          </Link>
+                        ))}
+                    </Box>
+                  ) : (
+                    <ListItemText
                       sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        columnGap: "10px",
+                        padding: "8px",
+                        borderRadius: "10px",
+                        backgroundColor:
+                          pathname === label.path
+                            ? theme.palette.primary.main
+                            : "",
+                        ":hover": {
+                          background: theme.palette.primary.main,
+                        },
                       }}
                     >
-                      <span> {label.icon}</span>
-                      <span>{label.title}</span>
-                    </Box>
-                  </ListItemText>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          columnGap: "10px",
+                        }}
+                      >
+                        <span> {label.icon}</span>
+                        <span>{label.title}</span>
+                      </Box>
+                    </ListItemText>
+                  )}
                 </Link>
               </ListItem>
             ))}
