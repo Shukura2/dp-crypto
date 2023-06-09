@@ -1,8 +1,8 @@
-type AbcProps = {
+type TableProps = {
   [key: string]: string | number;
 };
 
-const Table = ({ title, price, view }: AbcProps) => {
+const Table = ({ title, price, view }: TableProps) => {
   return (
     <tbody>
       <tr
