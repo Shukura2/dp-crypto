@@ -33,3 +33,13 @@ ul {
 img {
   width: 100%;
 }
+td, th {
+  text-align: left;
+}
+.card{
+  cursor: grab;
+}
+.card:active{
+  cursor: grabbing;
+}
+
