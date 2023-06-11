@@ -69,7 +69,7 @@ const Sidebar = ({ max }: Props) => {
                       </ListItemText>
                       {open &&
                         label.subNav.map((item) => (
-                          <Link href={item.path}>
+                          <Link href={item.path} key={item.path}>
                             <ListItemText
                               sx={{
                                 marginLeft: "30px",
@@ -168,7 +168,7 @@ const Sidebar = ({ max }: Props) => {
                     </ListItemText>
                     {open &&
                       label.subNav.map((item) => (
-                        <Link href={item.path}>
+                        <Link href={item.path} key={item.path}>
                           <ListItemText
                             sx={{
                               padding: "8px",

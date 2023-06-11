@@ -36,4 +36,10 @@ img {
 td, th {
   text-align: left;
 }
+.card{
+  cursor: grab;
+}
+.card:active{
+  cursor: grabbing;
+}
 
