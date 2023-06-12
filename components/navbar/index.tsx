@@ -184,7 +184,7 @@ const Navbar = ({ setMax }: any) => {
                       </ListItemText>
                       {open &&
                         label.subNav.map((item) => (
-                          <Link href={item.path}>
+                          <Link href={item.path} key={item.path}>
                             <ListItemText
                               sx={{
                                 padding: "8px",
