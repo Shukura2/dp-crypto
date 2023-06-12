@@ -197,15 +197,14 @@ const Exchange = (): JSX.Element => {
             <Typography>Recent Activities</Typography>
             <Typography>View all</Typography>
           </Box>
-          <div>
+          <Box>
             <DataGrid
               rows={rowsExchange}
               columns={columns}
-              slots={{
-                columnHeaders: () => null,
-              }}
+              hideFooter
+              columnHeaderHeight={0}
             />
-          </div>
+          </Box>
         </Grid>
       </Grid>
     </Box>
