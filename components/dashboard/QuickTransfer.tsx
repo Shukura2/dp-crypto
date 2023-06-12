@@ -18,7 +18,7 @@ import {
 import style from "./style";
 import { quickTransfer, quickTransferData } from "../StaticData/analytics";
 
-const QuickTransfer = (): JSX.Element => {
+const QuickTransfer = () => {
   const theme = useTheme();
 
   return (
