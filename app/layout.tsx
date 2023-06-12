@@ -7,11 +7,6 @@ import { ColorModeContext, useMode } from "@/theme";
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/Sidebar";
 
-export const metadata = {
-  title: "DP Crypto",
-  description: "A Dashboard that analyse specific information to the user",
-};
-
 export default function RootLayout({
   children,
 }: {
