@@ -51,7 +51,7 @@ const Sidebar = ({ max }: Props) => {
         >
           {links.map((label) => (
             <>
-              <ListItem key={label.title}>
+              <ListItem key={label.id}>
                 <Link href={label.path} style={{ width: "100%" }}>
                   {label.subNav ? (
                     <Box>
@@ -141,7 +141,7 @@ const Sidebar = ({ max }: Props) => {
           }}
         >
           {links.map((label) => (
-            <ListItem key={label.title}>
+            <ListItem key={label.id}>
               <Link href={label.path} style={{ width: "100%" }}>
                 {label.subNav ? (
                   <>

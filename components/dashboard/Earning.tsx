@@ -130,7 +130,7 @@ const Earning = () => {
           </Box>
 
           <div>
-            <DataGrid rows={rowsEarning} columns={columns} />
+            <DataGrid rows={rowsEarning} columns={columns} hideFooter />
           </div>
         </Box>
 
