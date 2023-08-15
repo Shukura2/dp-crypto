@@ -10,6 +10,7 @@ import ListItemText from "@mui/material/ListItemText";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { links } from "../StaticData/navbarLinks";
 import style from "./style";
+import { useMediaQuery } from "@mui/material";
 
 type Props = {
   max: boolean;
@@ -19,6 +20,11 @@ const Sidebar = ({ max }: Props) => {
   const theme = useTheme();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+
+  if (isMobile) {
+    return <></>;
+  }
 
   return (
     <div>

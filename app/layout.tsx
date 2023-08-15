@@ -36,7 +36,7 @@ export default function RootLayout({
                   display: "flex",
                 }}
               >
-                {isDesktop && <Sidebar max={max} />}
+                <Sidebar max={max} />
                 <Box
                   sx={{
                     width: "100%",
